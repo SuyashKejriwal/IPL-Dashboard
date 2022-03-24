@@ -1,0 +1,28 @@
+<div *ngFor="let match of matches">
+    <div [class]="match.teamName == match.matchWinner ? 'MatchDetailCard won-card' : 'MatchDetailCard lost-card' ">
+        <div class="row">
+            <div class="col-5">
+                <span class="vs">vs</span>
+            <h2><a href="/teams/{{match.opposition}}">{{match.opposition}}</a></h2>
+            <h3 class="match-date">{{match.date}}</h3>
+            <h4 class="match-venue">at {{match.venue}}</h4>
+            <h4 class="match-result">{{match.matchWinner}} won by {{match.resultMargin}} {{match.result}} </h4>
+            </div>
+            <div class="col-2">
+
+            </div>
+            <div class="col-5">
+                <h5>First Innings</h5>
+            <p>{{match.team1}}</p>
+            <h5>Second Innings</h5>
+            <p>{{match.team2}}</p>
+            <h5>Man of the match</h5>
+            <p>{{match.playerOfMatch}}</p>
+            <h5>Umpires</h5>
+            <p>{{match.umpire1}}, {{match.umpire2}}</p>
+            </div>
+        </div>
+        
+          
+    </div>
+</div>
