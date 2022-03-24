@@ -1,8 +1,0 @@
-<div *ngFor="let match of matches">
-    <div [class]="match.teamName == match.matchWinner ? 'MatchSmallCard won-card' : 'MatchSmallCard lost-card' ">
-        <span clas="vs">vs</span>
-        <h1><a href="/teams/{{match.opposition}}">{{match.opposition}}</a></h1>
-        <p class="match-result">{{match.matchWinner}} won by {{match.resultMargin}} {{match.result}} </p>
-    </div>
-</div>
-
